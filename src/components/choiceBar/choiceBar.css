@@ -1,0 +1,11 @@
+.left-div {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 50px;
+  max-width: 250px;
+}
+.nav-list {
+  margin-bottom: 100px;
+  cursor: pointer;
+}

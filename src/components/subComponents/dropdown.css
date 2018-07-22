@@ -1,0 +1,14 @@
+.dropdown-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.left-choice-dropdown {
+  padding-right: 10px;
+}
+.right-choice-dropdown {
+  width: 80px;
+  overflow: hidden;
+}
