@@ -1,6 +1,8 @@
 import React from "react";
-import DropdownBox from "../subComponents/dropdown";
 import "./clientEntry.css";
+import DropdownBox from "../subComponents/dropdown";
+import NumInput from "../subComponents/numInput";
+import CustomDatePicker from "../subComponents/customDatePicker";
 
 class ClientEntry extends React.Component {
   state = {
@@ -9,8 +11,8 @@ class ClientEntry extends React.Component {
     colorOptions: ["White", "Brown", "Black", "Tan"],
     idNumber: "12",
     tagNumber: "13",
-    issueDate: "12/12/1212",
-    expDate: "12/13/1212",
+    issueDate: new Date("1/31/2015"),
+    expDate: new Date("12/13/2015"),
     firstName: "Dave",
     lastName: "Davidson",
     homePhone: "555-555-5555",
@@ -26,10 +28,46 @@ class ClientEntry extends React.Component {
   setSecondaryColor = e => {
     this.setState({ secondaryColor: e });
   };
+  setIdNumber = e => {
+    this.setState({ idNumber: e });
+  };
+  setTagNumber = e => {
+    this.setState({ tagNumber: e });
+  };
+  handleIssueDateChange = date => {
+    this.setState({ issueDate: date });
+  };
+  handleExpDateChange = date => {
+    this.setState({ expDate: date });
+  };
 
   render() {
     return (
       <div className="client-entry">
+        <div className="value-entries">
+          <NumInput
+            onNumChange={this.setIdNumber}
+            name="ID #"
+            value={this.state.idNumber}
+          />
+          <NumInput
+            onNumChange={this.setTagNumber}
+            name="Tag #"
+            value={this.state.tagNumber}
+          />
+        </div>
+        <div className="calendar-entries">
+          <CustomDatePicker
+            dateName="Issued"
+            handleDateChange={this.handleIssueDateChange}
+            date={this.state.issueDate}
+          />
+          <CustomDatePicker
+            dateName="Expires"
+            handleDateChange={this.handleExpDateChange}
+            date={this.state.expDate}
+          />
+        </div>
         <div className="dropdowns">
           <DropdownBox
             currentChoice={this.state.primaryColor}

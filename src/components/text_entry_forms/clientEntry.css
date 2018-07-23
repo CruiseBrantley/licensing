@@ -1,3 +1,13 @@
 .dropdowns {
   height: auto;
 }
+.value-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.calendar-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import "./choiceBar.css";
+import "./navBar.css";
 
-const ChoiceBar = () => {
+const NavBar = () => {
   return (
     <div className="left-div">
       <h5 className="nav-list">CT Dog Licensing</h5>
@@ -11,4 +11,4 @@ const ChoiceBar = () => {
     </div>
   );
 };
-export default ChoiceBar;
+export default NavBar;

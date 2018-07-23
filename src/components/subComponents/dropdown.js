@@ -1,5 +1,5 @@
 import React from "react";
-import "./dropdown.css";
+import "./subComponentCss/dropdown.css";
 import {
   Dropdown,
   DropdownToggle,
@@ -22,7 +22,9 @@ class DropdownBox extends React.Component {
     return (
       <div className="dropdown-div">
         <div>
-          <span className="left-choice-dropdown">{this.props.dropdownName}: </span>
+          <span className="left-choice-dropdown">
+            {this.props.dropdownName}:{" "}
+          </span>
         </div>
         <div>
           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>

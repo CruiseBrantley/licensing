@@ -1,0 +1,41 @@
+.date-class {
+  display: flex;
+  align-items: center;
+}
+.left-date-class {
+  border: thin solid grey;
+  border-right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 38px;
+  border-color: #ced4da !important;
+  padding: 5px;
+  margin: 10px;
+  margin-right: 0;
+  color: #495057;
+  background-color: #e9ecef;
+}
+.react-date-picker__button {
+  margin: 10px;
+  height: 38px;
+  color: grey;
+  margin-left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-color: #ced4da !important;
+}
+.react-date-picker__button__input__input.react-date-picker__button__input__year {
+  color: #495057;
+}
+.react-date-picker__button__input__input.react-date-picker__button__input__month {
+  color: #495057;
+}
+.react-date-picker__button__input__input.react-date-picker__button__input__day {
+  color: #495057;
+}
+.react-date-picker__clear-button.react-date-picker__button__icon {
+  color: #495057 !important;
+}
+.react-date-picker__calendar {
+  left: -165px !important;
+}

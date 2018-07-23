@@ -1,0 +1,13 @@
+.prepend-class {
+  width: 60px;
+}
+.num-input.input-group {
+  width: 200px;
+  padding: 10px;
+}
+.input-group-text {
+  width: 120px;
+}
+.form-control {
+  text-align: end;
+}
