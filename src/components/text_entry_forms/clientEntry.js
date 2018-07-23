@@ -3,6 +3,7 @@ import "./clientEntry.css";
 import DropdownBox from "../subComponents/dropdown";
 import NumInput from "../subComponents/numInput";
 import CustomDatePicker from "../subComponents/customDatePicker";
+import { Input } from "reactstrap";
 
 class ClientEntry extends React.Component {
   state = {
@@ -67,6 +68,10 @@ class ClientEntry extends React.Component {
             handleDateChange={this.handleExpDateChange}
             date={this.state.expDate}
           />
+        </div>
+        <div className="name-entries">
+          <Input className="text-field" placeholder="First Name" />
+          <Input className="text-field" placeholder="Last Name" />
         </div>
         <div className="dropdowns">
           <DropdownBox

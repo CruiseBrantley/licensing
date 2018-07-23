@@ -1,11 +1,14 @@
-.left-div {
+.nav-div {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  justify-items: center;
+  flex-wrap: wrap;
   margin-right: 50px;
-  max-width: 250px;
+  border-right: 1px solid black;
 }
 .nav-list {
   margin-bottom: 100px;
   cursor: pointer;
+  margin: 20px;
 }

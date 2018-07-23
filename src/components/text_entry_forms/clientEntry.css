@@ -1,5 +1,8 @@
 .dropdowns {
+  display: flex;
   height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .value-entries {
   display: flex;
@@ -10,4 +13,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.name-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.text-field {
+  margin: 10px;
+  max-width: 180px;
 }

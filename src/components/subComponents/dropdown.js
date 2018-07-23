@@ -23,7 +23,7 @@ class DropdownBox extends React.Component {
       <div className="dropdown-div">
         <div>
           <span className="left-choice-dropdown">
-            {this.props.dropdownName}:{" "}
+            {this.props.dropdownName}:
           </span>
         </div>
         <div>
