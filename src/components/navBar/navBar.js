@@ -4,10 +4,8 @@ import "./navBar.css";
 const NavBar = () => {
   return (
     <div className="nav-div">
-      <h5 className="nav-list">CT Dog Licensing</h5>
-      <h5 className="nav-list">CT Sports Licensing</h5>
-      <h5 className="nav-list">General Licensing</h5>
-      <h5 className="nav-list">CT Notary</h5>
+      <h5 className="nav-list">Dog Licensing</h5>
+      <h5 className="nav-list">Marriage/Unions</h5>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import "./clientEntry.css";
 import DropdownBox from "../subComponents/dropdown";
 import NumInput from "../subComponents/numInput";
+import TextInput from "../subComponents/textInput";
 import CustomDatePicker from "../subComponents/customDatePicker";
 import { Input } from "reactstrap";
 
@@ -10,6 +11,8 @@ class ClientEntry extends React.Component {
     primaryColor: "Brown",
     secondaryColor: "Black",
     colorOptions: ["White", "Brown", "Black", "Tan"],
+    breed: "Husky",
+    breedOptions: ["Husky", "Chihuahua", "Great Dane", "Chewbacca"],
     idNumber: "12",
     tagNumber: "13",
     issueDate: new Date("1/31/2015"),
@@ -26,14 +29,11 @@ class ClientEntry extends React.Component {
   setPrimaryColor = e => {
     this.setState({ primaryColor: e });
   };
+  setBreed = e => {
+    this.setState({ breed: e });
+  };
   setSecondaryColor = e => {
     this.setState({ secondaryColor: e });
-  };
-  setIdNumber = e => {
-    this.setState({ idNumber: e });
-  };
-  setTagNumber = e => {
-    this.setState({ tagNumber: e });
   };
   handleIssueDateChange = date => {
     this.setState({ issueDate: date });
@@ -41,39 +41,62 @@ class ClientEntry extends React.Component {
   handleExpDateChange = date => {
     this.setState({ expDate: date });
   };
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   render() {
     return (
       <div className="client-entry">
         <div className="value-entries">
           <NumInput
-            onNumChange={this.setIdNumber}
-            name="ID #"
+            onChange={this.handleChange}
+            title="ID #"
+            name="idNumber"
             value={this.state.idNumber}
           />
           <NumInput
-            onNumChange={this.setTagNumber}
-            name="Tag #"
+            onChange={this.handleChange}
+            title="Tag #"
+            name="tagNumber"
             value={this.state.tagNumber}
           />
-        </div>
-        <div className="calendar-entries">
-          <CustomDatePicker
-            dateName="Issued"
-            handleDateChange={this.handleIssueDateChange}
-            date={this.state.issueDate}
-          />
-          <CustomDatePicker
-            dateName="Expires"
-            handleDateChange={this.handleExpDateChange}
-            date={this.state.expDate}
-          />
+          <div className="calendar-entries">
+            <CustomDatePicker
+              dateName="Issued"
+              name="issueDate"
+              handleDateChange={this.handleIssueDateChange}
+              date={this.state.issueDate}
+            />
+            <CustomDatePicker
+              dateName="Expires"
+              name="expDate"
+              handleDateChange={this.handleExpDateChange}
+              date={this.state.expDate}
+            />
+          </div>
         </div>
         <div className="name-entries">
-          <Input className="text-field" placeholder="First Name" />
-          <Input className="text-field" placeholder="Last Name" />
+          <TextInput
+            onChange={this.handleChange}
+            title="First"
+            name="firstName"
+            value={this.state.firstName}
+          />
+          <TextInput
+            onChange={this.handleChange}
+            title="Last"
+            name="lastName"
+            value={this.state.lastName}
+          />
         </div>
         <div className="dropdowns">
+          <DropdownBox
+            currentChoice={this.state.breed}
+            choices={this.state.breedOptions}
+            dropdownName="Breed"
+            onChoiceChange={this.setBreed}
+          />
           <DropdownBox
             currentChoice={this.state.primaryColor}
             choices={this.state.colorOptions}

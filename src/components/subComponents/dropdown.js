@@ -30,7 +30,7 @@ class DropdownBox extends React.Component {
           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle
               caret
-              color="primary"
+              color="secondary"
               className="right-choice-dropdown"
             >
               {this.props.currentChoice}
@@ -39,10 +39,7 @@ class DropdownBox extends React.Component {
               {this.props.choices.map((choice, index) => {
                 return (
                   <DropdownItem
-                    onClick={() => {
-                      this.props.onChoiceChange(choice);
-                      this.forceUpdate();
-                    }}
+                    onClick={() => this.props.onChoiceChange(choice)}
                     key={index}
                   >
                     {choice}

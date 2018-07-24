@@ -2,7 +2,7 @@ import React from "react";
 import { InputGroup, Input, InputGroupAddon } from "reactstrap/";
 import "./subComponentCss/numInput.css";
 
-const NumInput = props => {
+const TextInput = props => {
   return (
     <div>
       <InputGroup className="num-input">
@@ -14,11 +14,11 @@ const NumInput = props => {
           name={props.name}
           value={props.value}
           onChange={e => props.onChange(e)}
-          type="number"
+          type="text"
         />
       </InputGroup>
     </div>
   );
 };
 
-export default NumInput;
+export default TextInput;

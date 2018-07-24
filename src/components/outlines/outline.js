@@ -7,7 +7,8 @@ const Outline = () => {
   return (
     <div className="outline">
       <NavBar />
-      <ClientEntry />
+      <ClientEntry className="client-entry" />
+      <div className="spacing" />
     </div>
   );
 };

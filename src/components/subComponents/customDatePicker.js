@@ -8,8 +8,12 @@ const CustomDatePicker = props => {
       <div className="left-date-class">{props.dateName}</div>
       <DatePicker
         className="right-date-class"
-        onChange={props.handleDateChange}
+        onChange={e => {
+          e.target.name = props.name;
+          props.handleDateChange(e);
+        }}
         value={props.date}
+        name={props.name}
         calendarIcon={null}
         clearIcon={null}
       />

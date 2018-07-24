@@ -4,12 +4,26 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
+  min-width: 210px;
 }
 .left-choice-dropdown {
   padding-right: 10px;
   font-size: 1rem;
+  color: white;
 }
 .right-choice-dropdown {
-  width: 80px;
-  overflow: hidden;
+  overflow: auto;
+  max-width: 150px;
+}
+.right-choice-dropdown.dropdown-toggle.btn.btn-secondary {
+  background-color: #e0950b;
+  color: white;
+  border: 1px solid grey;
+  text-shadow: 1px 1px black;
+}
+.right-choice-dropdown.dropdown-toggle.btn.btn-primary::after {
+  border: none;
+}
+.dropdown.show {
+  border-color: black;
 }
