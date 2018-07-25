@@ -4,7 +4,6 @@ import DropdownBox from "../subComponents/dropdown";
 import NumInput from "../subComponents/numInput";
 import TextInput from "../subComponents/textInput";
 import CustomDatePicker from "../subComponents/customDatePicker";
-import { Input } from "reactstrap";
 
 class ClientEntry extends React.Component {
   state = {

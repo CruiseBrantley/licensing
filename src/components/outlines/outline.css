@@ -9,3 +9,13 @@
 .spacing {
   width: 30%;
 }
+
+@media (max-width: 800px) {
+  .outline {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .spacing {
+    width: 0;
+  }
+}
