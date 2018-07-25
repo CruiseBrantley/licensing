@@ -12,6 +12,8 @@ class ClientEntry extends React.Component {
     colorOptions: ["White", "Brown", "Black", "Tan"],
     breed: "Husky",
     breedOptions: ["Husky", "Chihuahua", "Great Dane", "Chewbacca"],
+    genderOptions: ["Male", "Female"],
+    gender: "Male",
     idNumber: "12",
     tagNumber: "13",
     issueDate: new Date("1/31/2015"),
@@ -19,20 +21,27 @@ class ClientEntry extends React.Component {
     firstName: "Dave",
     lastName: "Davidson",
     homePhone: "555-555-5555",
-    homeAddress: { street: "1st St", state: "CT", zip: "55555" },
+    street: "1st St",
+    street2: "",
+    state: "CT",
+    zip: "55555",
+    city: "Mount Hills",
     mailingAddress: true,
     miscInfo: "",
     location: "another street"
   };
 
-  setPrimaryColor = e => {
-    this.setState({ primaryColor: e });
-  };
   setBreed = e => {
     this.setState({ breed: e });
   };
+  setPrimaryColor = e => {
+    this.setState({ primaryColor: e });
+  };
   setSecondaryColor = e => {
     this.setState({ secondaryColor: e });
+  };
+  setGender = e => {
+    this.setState({ gender: e });
   };
   handleIssueDateChange = date => {
     this.setState({ issueDate: date });
@@ -89,6 +98,39 @@ class ClientEntry extends React.Component {
             value={this.state.lastName}
           />
         </div>
+        <div className="address-entries">
+          <TextInput
+            onChange={this.handleChange}
+            title="St"
+            name="street"
+            value={this.state.street}
+          />
+          <TextInput
+            onChange={this.handleChange}
+            title="St2"
+            name="street2"
+            placeholder="Optional"
+            value={this.state.street2}
+          />
+          <TextInput
+            onChange={this.handleChange}
+            title="City"
+            name="city"
+            value={this.state.city}
+          />
+          <TextInput
+            onChange={this.handleChange}
+            title="State"
+            name="state"
+            value={this.state.state}
+          />
+          <NumInput
+            onChange={this.handleChange}
+            title="Zip"
+            name="zip"
+            value={this.state.zip}
+          />
+        </div>
         <div className="dropdowns">
           <DropdownBox
             currentChoice={this.state.breed}
@@ -107,6 +149,12 @@ class ClientEntry extends React.Component {
             choices={this.state.colorOptions}
             dropdownName="Secondary Color"
             onChoiceChange={this.setSecondaryColor}
+          />
+          <DropdownBox
+            currentChoice={this.state.gender}
+            choices={this.state.genderOptions}
+            dropdownName="Gender"
+            onChoiceChange={this.setGender}
           />
         </div>
       </div>
