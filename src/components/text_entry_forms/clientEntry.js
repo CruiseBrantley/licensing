@@ -11,15 +11,18 @@ class ClientEntry extends React.Component {
     secondaryColor: "Black",
     colorOptions: ["White", "Brown", "Black", "Tan"],
     breed: "Husky",
-    breedOptions: ["Husky", "Chihuahua", "Great Dane", "Chewbacca"],
+    breedOptions: ["Husky", "Chihuahua", "Great Dane"],
     genderOptions: ["Male", "Female"],
     gender: "Male",
     idNumber: "12",
     tagNumber: "13",
+    dogName: "Fido",
     issueDate: new Date("1/31/2015"),
     expDate: new Date("12/13/2015"),
+    vacLength: "2 years",
     firstName: "Dave",
     lastName: "Davidson",
+    suffix: "Jr.",
     homePhone: "555-555-5555",
     street: "1st St",
     street2: "",
@@ -56,35 +59,13 @@ class ClientEntry extends React.Component {
   render() {
     return (
       <div className="client-entry">
-        <div className="value-entries">
-          <NumInput
-            onChange={this.handleChange}
-            title="ID #"
-            name="idNumber"
-            value={this.state.idNumber}
-          />
-          <NumInput
-            onChange={this.handleChange}
-            title="Tag #"
-            name="tagNumber"
-            value={this.state.tagNumber}
-          />
-          <div className="calendar-entries">
-            <CustomDatePicker
-              dateName="Issued"
-              name="issueDate"
-              handleDateChange={this.handleIssueDateChange}
-              date={this.state.issueDate}
-            />
-            <CustomDatePicker
-              dateName="Expires"
-              name="expDate"
-              handleDateChange={this.handleExpDateChange}
-              date={this.state.expDate}
-            />
-          </div>
-        </div>
         <div className="name-entries">
+          <TextInput
+            onChange={this.handleChange}
+            title="Last"
+            name="lastName"
+            value={this.state.lastName}
+          />
           <TextInput
             onChange={this.handleChange}
             title="First"
@@ -93,9 +74,9 @@ class ClientEntry extends React.Component {
           />
           <TextInput
             onChange={this.handleChange}
-            title="Last"
-            name="lastName"
-            value={this.state.lastName}
+            title="Suffix"
+            name="suffix"
+            value={this.state.suffix}
           />
         </div>
         <div className="address-entries">
@@ -104,13 +85,6 @@ class ClientEntry extends React.Component {
             title="St"
             name="street"
             value={this.state.street}
-          />
-          <TextInput
-            onChange={this.handleChange}
-            title="St2"
-            name="street2"
-            placeholder="Optional"
-            value={this.state.street2}
           />
           <TextInput
             onChange={this.handleChange}
@@ -129,6 +103,46 @@ class ClientEntry extends React.Component {
             title="Zip"
             name="zip"
             value={this.state.zip}
+          />
+        </div>
+        <div className="value-entries">
+          <NumInput
+            onChange={this.handleChange}
+            title="ID #"
+            name="idNumber"
+            value={this.state.idNumber}
+          />
+          <NumInput
+            onChange={this.handleChange}
+            title="Tag #"
+            name="tagNumber"
+            value={this.state.tagNumber}
+          />
+          <TextInput
+            onChange={this.handleChange}
+            title="Name"
+            name="dogName"
+            value={this.state.dogName}
+          />
+        </div>
+        <div className="calendar-entries">
+          <CustomDatePicker
+            dateName="Issued"
+            name="issueDate"
+            handleDateChange={this.handleIssueDateChange}
+            date={this.state.issueDate}
+          />
+          <CustomDatePicker
+            dateName="Expires"
+            name="expDate"
+            handleDateChange={this.handleExpDateChange}
+            date={this.state.expDate}
+          />
+          <TextInput
+            onChange={this.handleChange}
+            title="Length"
+            name="vacLength"
+            value={this.state.vacLength}
           />
         </div>
         <div className="dropdowns">

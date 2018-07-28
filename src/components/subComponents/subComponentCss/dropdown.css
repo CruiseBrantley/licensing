@@ -27,3 +27,8 @@
 .dropdown.show {
   border-color: black;
 }
+@media (max-width: 800px) {
+  .dropdown-div {
+    justify-content: flex-end;
+  }
+}

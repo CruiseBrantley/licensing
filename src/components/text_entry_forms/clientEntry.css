@@ -2,27 +2,27 @@
   display: flex;
   height: auto;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 .value-entries {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .calendar-entries {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .name-entries {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .address-entries {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .text-field {
   margin: 10px;
@@ -30,4 +30,19 @@
 }
 
 @media (max-width: 800px) {
+  .dropdowns {
+    justify-content: flex-end;
+  }
+  .value-entries {
+    justify-content: flex-end;
+  }
+  .calendar-entries {
+    justify-content: flex-end;
+  }
+  .name-entries {
+    justify-content: flex-end;
+  }
+  .address-entries {
+    justify-content: flex-end;
+  }
 }

@@ -26,7 +26,7 @@
   .nav-div {
     border-right: none;
     border-bottom: 1px solid white;
-    align-self: center;
+    align-self: flex-end;
     justify-content: center;
     margin: 0;
     padding: 0;

@@ -8,7 +8,7 @@ const Outline = () => {
     <div className="outline">
       <NavBar />
       <ClientEntry className="client-entry" />
-      <div className="spacing" />
+      {/* <div className="spacing" /> */}
     </div>
   );
 };
